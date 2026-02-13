@@ -2,32 +2,15 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace "com.example.whitesquare"   // MUST match package in build.gradle namespace
-    compileSdkVersion 33                   // Target SDK
+    namespace "com.example.templateapk"
+    compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.whitesquare"
-        minSdkVersion 21
-        targetSdkVersion 33
+        applicationId "com.example.templateapk"
+        minSdk 21
+        targetSdk 33
         versionCode 1
         versionName "1.0"
-    }
-
-    // Java + Kotlin compiler targets must match
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
-    }
-
-    kotlinOptions {
-        jvmTarget = "17"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-        }
-        debug {}
     }
 }
 
